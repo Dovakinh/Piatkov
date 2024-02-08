@@ -8,6 +8,6 @@ def squared(a, b, k):
                 print()
                 d = 0
             else:
-                print(f'{i ** 2}', end=' ')
+                print(f'{i ** 2:<4}', end=' ')
             d += 1
 squared(11, 99, 10)
