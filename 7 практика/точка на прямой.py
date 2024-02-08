@@ -8,4 +8,3 @@ def line(s, t):
         print('True')
     else:
         print('False')
-line("10x+60", "1;7")
