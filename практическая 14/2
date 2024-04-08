@@ -1,0 +1,14 @@
+from random import randint
+n = int(input('количество элементов в массиве '))
+a = [randint(0, 5) for i in range(n)]
+maximum = 0
+minimum = 6
+print('Массив', end = ' ')
+print(*a)
+for i in range(n):
+    if a[i] > maximum:
+        maximum = a[i]
+    if a[i] < minimum:
+        minimum = a[i]
+print(f'min = {minimum}')
+print(f'max = {maximum}')
