@@ -1,6 +1,6 @@
 a = [int(i) for i in input().split()]
 m = a[0]
-c = 0
+c = 1
 for i in range (len(a)-1):
     if a[i+1] > m:
         m = a[i + 1]
