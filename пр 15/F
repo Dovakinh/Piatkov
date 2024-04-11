@@ -1,0 +1,10 @@
+from random import randint
+a = int(input('Введите количество элементов: '))
+b = [randint(-100, 100) for i in range(a)]
+print(f'Массив:\n{" ".join(str(i) for i in b)}')
+plus = [i for i in b if i > 0]
+minus = [i for i in b if i <= 0]
+b = plus + minus
+print("Результат:")
+print(*b)
+print('Количество положительных элементов:',len(plus))
