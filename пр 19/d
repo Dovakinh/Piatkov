@@ -1,0 +1,10 @@
+a = input('Введите строку: ')
+c = []
+kol = 1
+for i in range(len(a)):
+    if a[i] == a[i + 1:i + 2]:
+        kol += 1
+        continue
+    c.append(''.join([a[i], str(kol)]))
+    kol = 1
+print('Закодированная строка:', ''.join(c))
