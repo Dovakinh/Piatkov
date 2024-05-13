@@ -1,23 +1,22 @@
-def rim(bukva, kol):
+def rim(bukva):
     if bukva == 'M':
-        print(1000 * kol)
+        return (1000)
     elif bukva == 'X':
-        print(1000 * kol)
+        return (10)
     elif bukva == 'I':
-        print(1000 * kol)
+        return (1)
     elif bukva == 'C':
-        print(1000 * kol)
+        return (100)
 
 
-a = [i for i in input().split()]
-for i in a:
-    if 'M' in i or 'X' in i or 'I' in i or 'C' in i:
-        kol = 1
-        bukva = i[0]
-        for j in range(len(i) - 1):
-            if i[j] == i[j + 1]:
-                kol += 1
-                pass
-            else:
-                print(i[j], kol)
-                rim(bukva, kol)
+b = [i for i in input().split()]
+for a in b:
+    if 'M' in a or 'X' in a or 'I' in a or 'C' in a:
+        kol = 0
+        bukva = a[0]
+        s = 0
+        for i in a:
+            s += rim(i)
+        b.insert(b.index(a), s)
+        del b[b.index(a)]
+print(*b)
