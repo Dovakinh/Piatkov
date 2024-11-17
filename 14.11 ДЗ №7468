@@ -1,0 +1,10 @@
+from math import * 
+n = 26 + 10 + 8164
+i = ceil(log2(n)) 
+id_count = 835
+i_all = 157 * 1024 
+k_id_list = [] 
+for k in range(1, 1000): 
+    if ceil(k * i / 8) * id_count > i_all:
+        k_id_list.append(k) 
+print(min(k_id_list))
